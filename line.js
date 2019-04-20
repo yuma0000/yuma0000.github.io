@@ -1,5 +1,5 @@
 {
-  "destination": "xxxxxxxxxx", 
+  "destination": "U447221eb5208fef4f77338afaf0e0930", 
   "events": [
     {
       "replyToken": "0f3779fba3b349968c5d07db31eab56f",
