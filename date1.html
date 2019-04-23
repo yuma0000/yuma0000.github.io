@@ -28,8 +28,11 @@ let constrains = { video: true, audio: true }
 let recorder = null
 let record_data = []
 
- //* ユーザーのデバイスによるカメラ表示を開始し、
+/**
+ * ユーザーのデバイスによるカメラ表示を開始し、
  * 各ボタンの挙動を設定する
+ *
+ */
 function startup() {
   video = document.getElementById('video')
   canvas = document.getElementById('canvas')
@@ -110,7 +113,6 @@ function startRecorder() {
 
 startup()
 </script>
-
 
  </body>
 </html>
