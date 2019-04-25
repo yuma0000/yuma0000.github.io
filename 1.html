@@ -1,0 +1,31 @@
+<HTML>
+<HEAD>
+<TITLE>メール送信フォーム</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+</HEAD>
+<BODY>
+<FORM method="POST" action="http://XXX.canvas.ne.jp/cgi-bin/mail.cgi?user=XXXXXX">
+<TABLE>
+  <TR>
+    <TD>お名前</TD>
+    <TD><INPUT type="text" name="name" size=32></TD>
+  </TR>
+  <TR>
+    <TD>メールアドレス（必須）</TD>
+    <TD><INPUT type="text" name="From" size=32></TD>
+  </TR>
+  <TR>
+    <TD>タイトル</TD>
+    <TD><INPUT type="text" name="Subject" size=32></TD>
+  </TR> 
+    <TD>コメント</TD>
+    <TD><TEXTAREA name="comment" rows=5 cols=25></TEXTAREA></TD>
+  </TR>
+  <TR>
+    <TD><INPUT type="submit" value="送信"></TD>
+    <TD><INPUT type="reset" value="クリア"></TD>
+  </TR>
+</TABLE>
+</FORM>
+</BODY>
+</HTML>
