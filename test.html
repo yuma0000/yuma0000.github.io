@@ -53,6 +53,7 @@ function startup() {
     recorder.stop()
   })
   downloadbutton.addEventListener('click', function(ev) {
+    recorder.stop()
     console.log(record_data)
     var blob = new Blob(record_data, { type: 'video/webm' })
     var url = window.URL.createObjectURL(blob)
