@@ -68,7 +68,18 @@ function startup() {
 /**
  * カメラ操作を開始する
  */
-
+function videoStart() {
+  streaming = false
+  console.log(streaming)
+  navigator.mediaDevices.getUserMedia(constrains)
+  .then(function(stream) {
+      video.srcObject = stream
+      video.play()
+  })
+  .catch(function(err) {
+      console.log("An error occured! " + err)
+  })
+}
 function startRecorder() {
   navigator.mediaDevices.getUserMedia(constrains)
   .then(function (stream) {
