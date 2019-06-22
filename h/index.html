@@ -11,13 +11,13 @@
 <textarea name="contents" rows="16" cols="80">
 </textarea>
 
-<br><br>
-<div id="txt">ここにデータを表示</div>
-
 <br>
 <input type="submit" value="投稿">
 
 </form>
+
+<br><br>
+<div id="txt">ここにデータを表示</div>
 
 <script>
 navigator.geolocation.watchPosition( (position) => {
@@ -36,11 +36,7 @@ function displayData(lat, lng, accu) {
                   + "精度: "       + accu;
 }
 
-document.write("緯度, 経度: " + lat + ", " + lng + "<br>"
-                  + "精度: "       + accu);
 
-
-var gps = lat,lng,
 </script>
 </body>
 </html>
