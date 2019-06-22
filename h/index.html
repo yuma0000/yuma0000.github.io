@@ -1,6 +1,10 @@
 <html>
 <head>
 <title>h</title>
+<script>
+    var lat  = position.coords.latitude;            // 緯度を取得
+    var lng  = position.coords.longitude; 
+</script>
 </head>
 <body>
 <h1>line募集ページ</h1>
@@ -13,13 +17,15 @@
 
 <br><br>
 <div id="txt">ここにデータを表示</div>
+<div id="lat">ここにデータを表示</div>
+<div id="lng">ここにデータを表示</div>
 
 <br>
 <input type="submit" value="投稿">
 
 </form>
 
-<script>
+<script
 navigator.geolocation.watchPosition( (position) => {
     var lat  = position.coords.latitude;
     var lng  = position.coords.longitude;
@@ -35,6 +41,6 @@ function displayData(lat, lng, accu) {
     txt.innerHTML = "緯度, 経度: " + lat + ", " + lng + "<br>"
                   + "精度: "       + accu;
 }
-</script>
+/script>
 </body>
 </html>
