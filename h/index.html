@@ -29,7 +29,7 @@ navigator.geolocation.watchPosition( (position) => {
 }, {
     enableHighAccuracy: true
 });
- 
+
 function displayData(lat, lng, accu) {
     var txt = document.getElementById("txt");
     txt.innerHTML = "緯度, 経度: " + lat + ", " + lng + "<br>"
