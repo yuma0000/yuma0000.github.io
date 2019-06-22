@@ -32,7 +32,9 @@ navigator.geolocation.watchPosition( (position) => {
 
 
 
-var gps = lat,lng;
+var gps = var txt = document.getElementById("txt");
+    txt.innerHTML = "緯度, 経度: " + lat + ", " + lng + "<br>"
+                  + "精度: "       + accu;
 
 document.write(gps);
 
