@@ -17,6 +17,7 @@
 </form>
 
 <br><br>
+<div id="txt">a</div>
 
 <script>
 navigator.geolocation.watchPosition( (position) => {
@@ -36,9 +37,6 @@ function displayData(lat, lng, accu) {
     txt.innerHTML = "緯度, 経度: " + lat + ", " + lng + "<br>"
                   + "精度: "       + accu;
 }
-
-document.write(txt);
-
 </script>
 </body>
 </html>
