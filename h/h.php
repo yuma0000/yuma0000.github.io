@@ -9,6 +9,10 @@ $data = $data."<p>player:".$name."</p>\r\n";
 $data = $data."<p>text:</p>\r\n";
 $data = $data."<p>".$contents."</p>\r\n";
 
+ print('<p>投稿者:'.$name.'</p>');
+print('<p>テキスト:</p>');
+print('<p>'.$contents.'</p>');
+ 
  
 $data = $data."";
 
