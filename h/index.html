@@ -29,12 +29,11 @@ navigator.geolocation.watchPosition( (position) => {
     enableHighAccuracy: true
 });
 
-
-
 function displayData(lat, lng, accu) {
-    var document.getElementById("txt") = "緯度, 経度: " + lat + ", " + lng + "<br>"
+    var txt = document.getElementById("txt");
+    txt.innerHTML = "緯度, 経度: " + lat + ", " + lng + "<br>"
                   + "精度: "       + accu;
 }
-</script>
+/script>
 </body>
 </html>
