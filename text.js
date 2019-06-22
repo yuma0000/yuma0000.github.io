@@ -1,3 +1,4 @@
+<script>
 var fs = require("fs");
 
 var text = "テスト出力";
@@ -15,3 +16,4 @@ try {
 }catch(e){
   console.log(e);
 }
+</script>
