@@ -17,9 +17,12 @@ navigator.geolocation.getCurrentPosition( (position) => {
     enableHighAccuracy: true
 });
 
-//function displayData(lat, lng, accu) {
+function displayData(lat, lng, accu) {
 
-//document.write(month + "<br>" + day + "<br><br>" + lat + "<br>" + lng);
+//document.write
+var date = (month + "<br>" + day + "<br><br>" + lat + "<br>" + lng);
+
+}
 
 function doGet(e) {
   var rowData = {};  
@@ -38,11 +41,7 @@ function doGet(e) {
 
       var sheet = SpreadsheetApp.openById(id).getSheetByName("シート1");
 
-function displayData(lat, lng, accu) {
-
-      var array = [month + day + lat + lng]
-
-}
+      var array = [date];
 
       sheet.appendRow(array);
 
