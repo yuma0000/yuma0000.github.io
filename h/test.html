@@ -4,11 +4,6 @@ var today = new Date();
 var month = today.getMonth() + 1;
 var day = today.getDate();
 
-document.write(month);
-document.write("<br>");
-document.write(day);
-document.write("<br><br>")
-
 navigator.geolocation.getCurrentPosition( (position) => {
     var lat  = position.coords.latitude;
     var lng  = position.coords.longitude;
@@ -18,7 +13,12 @@ navigator.geolocation.getCurrentPosition( (position) => {
 }, {
     enableHighAccuracy: true
 });
- 
+
+document.write(month);
+document.write("<br>");
+document.write(day);
+document.write("<br><br>")
+
 function displayData(lat, lng, accu) {
 
 document.write(lat);
@@ -27,10 +27,3 @@ document.write(lng);
 document.write("<br><br>")
 }
 </script>
-<br><br>
-コピー
-
-    var txt = document.getElementById("txt");
-    txt.innerHTML = "緯度, 経度: " + lat + ", " + lng + "<br>"
-                  + "精度: "       + accu;
-<div id="txt">ここにデータを表示</div>
