@@ -1,0 +1,34 @@
+function doGet(e) {
+  var rowData = {};  
+
+  if (e.parameter == undefined) {
+
+      //パラメータ不良の場合はundefinedで返す
+      var getvalue = "undefined"
+
+      //エラーはJSONで返すつもりなので
+      rowData.value = getvalue;
+      var result = JSON.stringify(rowData);
+      return ContentService.createTextOutput(result);
+
+  }else{
+
+      var id = '1nJeV41RpoUOAZPRfmSkll_wl-KT_A4KHYrRoouuWnaI';
+
+      var sheet = SpreadsheetApp.openById(id).getSheetByName("シート1");
+
+      var array = [ e.parameter.p1 , e.parameter.p2 , e.parameter.p3 , e.parameter.p4 ];
+
+      //シートに配列を書き込み
+      sheet.appendRow(array);
+
+      //書き込み終わったらOKを返す
+      var getvalue = "ok"
+
+      //エラーはJSONで返すつもりなので
+      rowData.value = getvalue;
+      var result = JSON.stringify(rowData);
+      return ContentService.createTextOutput(result);
+
+  }
+}
