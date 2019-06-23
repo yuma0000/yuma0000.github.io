@@ -19,7 +19,7 @@ navigator.geolocation.getCurrentPosition( (position) => {
 
 function displayData(lat, lng, accu) {
 
-document.write(month + "<br>" + day + "<br><br>" + lat + "<br>" + lng);
+//document.write(month + "<br>" + day + "<br><br>" + lat + "<br>" + lng);
 
 function doGet(e) {
   var rowData = {};  
@@ -38,7 +38,12 @@ function doGet(e) {
 
       var sheet = SpreadsheetApp.openById(id).getSheetByName("シート1");
 
+function displayData(lat, lng, accu) {
+
       var array = [month + day + lat + lng]
+
+}
+
       sheet.appendRow(array);
 
       var getvalue = "ok"
@@ -50,5 +55,4 @@ function doGet(e) {
   }
 }
 
-}
 </script>
