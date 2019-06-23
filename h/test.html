@@ -9,13 +9,13 @@ document.write(day);
 
 
 navigator.geolocation.watchPosition( (position) => {
-    var lat  = position.coords.latitude;
-    var lng  = position.coords.longitude;
-    var accu = position.coords.accuracy;
-    displayData(lat, lng, accu);
-}, (error) => {
+    var lat  = position.coords.latitude;            // 緯度を取得
+    var lng  = position.coords.longitude;           // 経度を取得
+    var accu = position.coords.accuracy;            // 緯度・経度の精度を取得
+    displayData(lat, lng, accu);                    // displayData 関数を実行
+}, (error) => {                                     // エラー処理（今回は特に何もしない）
 }, {
-    enableHighAccuracy: true
+    enableHighAccuracy: true                        // 高精度で測定するオプション
 });
 
 function displayData(lat, lng, accu) {
