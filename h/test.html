@@ -25,3 +25,10 @@ document.write("<br>");
 document.write(lng);
 }
 </script>
+<br><br>
+コピー
+
+    var txt = document.getElementById("txt");
+    txt.innerHTML = "緯度, 経度: " + lat + ", " + lng + "<br>"
+                  + "精度: "       + accu;
+<div id="txt">ここにデータを表示</div>
