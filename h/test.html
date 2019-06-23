@@ -7,6 +7,7 @@ var day = today.getDate();
 document.write(month);
 document.write("<br>");
 document.write(day);
+document.write("<br><br>")
 
 navigator.geolocation.watchPosition( (position) => {
     var lat  = position.coords.latitude;
@@ -23,6 +24,7 @@ function displayData(lat, lng, accu) {
 document.write(lat);
 document.write("<br>");
 document.write(lng);
+document.write("<br><br>")
 }
 </script>
 <br><br>
