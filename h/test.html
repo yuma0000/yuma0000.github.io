@@ -9,7 +9,7 @@ document.write("<br>");
 document.write(day);
 document.write("<br><br>")
 
-navigator.geolocation( (position) => {
+navigator.geolocation.getCurrentPosition( (position) => {
     var lat  = position.coords.latitude;
     var lng  = position.coords.longitude;
     var accu = position.coords.accuracy;
