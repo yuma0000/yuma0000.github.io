@@ -1,4 +1,4 @@
-<a>a</a>
+<div id="txt">a</div>
 <script>
 var today = new Date();
 var month = today.getMonth() + 1;
@@ -7,4 +7,21 @@ var day = today.getDate();
 document.write(month);
 document.write("<br>");
 document.write(day);
+
+
+navigator.geolocation.watchPosition( (position) => {
+    var lat  = position.coords.latitude;
+    var lng  = position.coords.longitude;
+    var accu = position.coords.accuracy;
+    displayData(lat, lng, accu);
+}, (error) => {
+}, {
+    enableHighAccuracy: true
+});
+
+function displayData(lat, lng, accu) {
+    var txt = document.getElementById("txt");
+    txt.innerHTML = "緯度, 経度: " + lat + ", " + lng + "<br>"
+                  + "精度: "       + accu;
+}
 </script>
