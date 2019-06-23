@@ -1,4 +1,3 @@
-<div id="txt">ここにデータを表示</div>
 <script>
 var today = new Date();
 var month = today.getMonth() + 1;
@@ -7,6 +6,7 @@ var day = today.getDate();
 document.write(month);
 document.write("<br>");
 document.write(day);
+document.write("<div id="txt">ここにデータを表示</div>");
 
 navigator.geolocation.watchPosition( (position) => {
     var lat  = position.coords.latitude;
