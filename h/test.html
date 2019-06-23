@@ -20,12 +20,8 @@ navigator.geolocation.watchPosition( (position) => {
  
 function displayData(lat, lng, accu) {
 
-document.write.innerHTML(lat);
+document.write(lat);
 document.write("<br>");
 document.write(lng);
 }
 </script>
-    var txt = document.getElementById("txt");
-    txt.innerHTML = "緯度, 経度: " + lat + ", " + lng + "<br>"
-                  + "精度: "       + accu;
-<div id="txt">ここにデータを表示</div>
