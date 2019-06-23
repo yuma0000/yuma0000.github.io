@@ -1,4 +1,4 @@
-<div id="txt">ここにデータを表示</div>
+
 <script>
 var today = new Date();
 var month = today.getMonth() + 1;
@@ -7,7 +7,6 @@ var day = today.getDate();
 document.write(month);
 document.write("<br>");
 document.write(day);
-document.write("");
 
 navigator.geolocation.watchPosition( (position) => {
     var lat  = position.coords.latitude;
@@ -24,4 +23,8 @@ function displayData(lat, lng, accu) {
     txt.innerHTML = "緯度, 経度: " + lat + ", " + lng + "<br>"
                   + "精度: "       + accu;
 }
+
+
+document.write(lat);
+document.write(lng);
 </script>
