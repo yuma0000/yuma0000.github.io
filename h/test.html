@@ -18,7 +18,9 @@ navigator.geolocation.getCurrentPosition( (position) => {
 
 function displayData(lat, lng, accu) {
 
-var date = month + "<br>" + day + "<br><br>" + lat + "<br>" + lng;
+//var date = month + "<br>" + day + "<br><br>" + lat + "<br>" + lng;
+
+var date = lat + lng;
 
 document.write("<a href=http://yumaabckhh.php.xdomain.jp/h.php?name=" + date + ">a</a>")
 
