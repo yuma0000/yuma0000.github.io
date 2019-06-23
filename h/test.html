@@ -1,3 +1,4 @@
+<div id="txt">ここにデータを表示</div>
 <script>
 var today = new Date();
 var month = today.getMonth() + 1;
@@ -7,19 +8,19 @@ document.write(month);
 document.write("<br>");
 document.write(day);
 
-
 navigator.geolocation.watchPosition( (position) => {
-    var lat  = position.coords.latitude;            // 緯度を取得
-    var lng  = position.coords.longitude;           // 経度を取得
-    var accu = position.coords.accuracy;            // 緯度・経度の精度を取得
-    displayData(lat, lng, accu);                    // displayData 関数を実行
-}, (error) => {                                     // エラー処理（今回は特に何もしない）
+    var lat  = position.coords.latitude;
+    var lng  = position.coords.longitude;
+    var accu = position.coords.accuracy;
+    displayData(lat, lng, accu);
+}, (error) => {
 }, {
-    enableHighAccuracy: true                        // 高精度で測定するオプション
+    enableHighAccuracy: true
 });
-
+ 
 function displayData(lat, lng, accu) {
-    document.write("緯度, 経度: " + lat + ", " + lng + "<br>"
-                  + "精度: "       + accu);
+    var txt = document.getElementById("txt");
+    txt.innerHTML = "緯度, 経度: " + lat + ", " + lng + "<br>"
+                  + "精度: "       + accu;
 }
 </script>
