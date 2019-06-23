@@ -19,39 +19,17 @@ navigator.geolocation.getCurrentPosition( (position) => {
 
 function displayData(lat, lng, accu) {
 
-//document.write
+document.write
 var date = (month + "<br>" + day + "<br><br>" + lat + "<br>" + lng);
 
 }
 
-function doGet(e) {
-  var rowData = {};  
-
-  if (e.parameter == undefined) {
-
-      var getvalue = "undefined"
-
-      rowData.value = getvalue;
-      var result = JSON.stringify(rowData);
-      return ContentService.createTextOutput(result);
-
-  }else{
-
-      var id = '1nJeV41RpoUOAZPRfmSkll_wl-KT_A4KHYrRoouuWnaI';
-
-      var sheet = SpreadsheetApp.openById(id).getSheetByName("シート1");
-
-      var array = [date];
-
-      sheet.appendRow(array);
-
-      var getvalue = "ok"
-
-      rowData.value = getvalue;
-      var result = JSON.stringify(rowData);
-      return ContentService.createTextOutput(result);
-
-  }
-}
-
 </script>
+
+<?php
+echo 'Hello ' . htmlspecialchars($_GET["date"]) . '!';
+?>
+
+
+
+//html 情報 から parameter から php 書き込み
