@@ -16,11 +16,11 @@ navigator.geolocation.getCurrentPosition( (position) => {
     enableHighAccuracy: true
 });
 
-//function displayData(lat, lng, accu) {
+function displayData(lat, lng, accu) {
 
 var date = month + "<br>" + day + "<br><br>" + lat + "<br>" + lng;
 
-document.write(date) 
+document.write("<a>http://yumaabckhh.php.xdomain.jp/h.php?name=" + date + "</a>")
 
 }
 </script>
@@ -28,5 +28,3 @@ document.write(date)
 <?php
 echo 'Hello ' . htmlspecialchars($_GET["date"]) . '!';
 ?>
-
-<a>http://yumaabckhh.php.xdomain.jp/h.php?name=</a>
