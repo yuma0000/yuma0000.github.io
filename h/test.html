@@ -18,8 +18,8 @@ navigator.geolocation.getCurrentPosition( (position) => {
 
 function displayData(lat, lng, accu) {
 
-var date = "http://yumaabckhh.php.xdomain.jp/h.php?get=" + month + "月" + day + "日" + "%" + lat + "%" + lng + "%" + accu;
+var date = "get=" + month + "月" + day + "日" + "%" + lat + "%" + lng + "%" + accu;
 
-document.write("<input type="button" onClick='location.href= date' value="送信">" )
+document.write(<a href="http://yumaabckhh.php.xdomain.jp/h.php?" + date>送信</a>)
 }
 </script>
