@@ -18,12 +18,11 @@ navigator.geolocation.getCurrentPosition( (position) => {
 
 function displayData(lat, lng, accu) {
 
-document.write("");
 var textname = document.getElementById('textname').value;
 
 var date = "get=" + month + "月" + day + "日" + "%3Cbr%3E" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu + "&name=" + textname;
 
-document.write("<a href=http://yumaabckhh.php.xdomain.jp/h.php?" + date + ">送信</a>");
+document.write("<input type="text" id="textname"><br><a href=http://yumaabckhh.php.xdomain.jp/h.php?" + date + ">送信</a>");
 }
 </script>
-<input type="text" id="textname">
+
