@@ -18,7 +18,7 @@ navigator.geolocation.getCurrentPosition( (position) => {
 
 function displayData(lat, lng, accu) {
 
-document.write("<input type="text" id="textname">");
+document.write("");
 var textname = document.getElementById('textname').value;
 
 var date = "get=" + month + "月" + day + "日" + "%3Cbr%3E" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu + "&name=" + textname;
@@ -26,3 +26,4 @@ var date = "get=" + month + "月" + day + "日" + "%3Cbr%3E" + lat + "%3Cbr%3E" 
 document.write("<a href=http://yumaabckhh.php.xdomain.jp/h.php?" + date + ">送信</a>");
 }
 </script>
+<input type="text" id="textname">
