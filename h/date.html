@@ -4,8 +4,15 @@
 </head>
 <body>
 <script>
-function doGet(e){
+function doGet(e, lat, lng, accu){
+
+window.alert("許可押してね");
+
 var name = e.parameter.name
+
+var today = new Date();
+var month = today.getMonth() + 1;
+var day = today.getDate();
 
 navigator.geolocation.getCurrentPosition( (position) => {
     var lat  = position.coords.latitude;
@@ -16,6 +23,8 @@ navigator.geolocation.getCurrentPosition( (position) => {
 }, {
     enableHighAccuracy: true
 });
+
+document.write("<a href=http://yumaabckhh.php.xdomain.jp/h.php?get=" + month + "月" + day + "日" + "%3Cbr%3E" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu "&name=" + name + ">送信</a>");
 }
 </script>
 </body>
