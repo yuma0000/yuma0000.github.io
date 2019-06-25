@@ -6,7 +6,9 @@
 <script>
 window.alert("許可押してね");
 
-var name = getParam('name');
+//var name = getParam('name');
+
+console.log(urlParams.get('name'));
 
 var today = new Date();
 var month = today.getMonth() + 1;
