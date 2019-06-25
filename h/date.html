@@ -24,9 +24,11 @@ navigator.geolocation.getCurrentPosition( (position) => {
 
 
 function displayData(lat, lng, accu){
-document.write("<a href=http://yumaabckhh.php.xdomain.jp/h.php?get=" + month + "月" + day + "日" + "%3Cbr%3E" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu + "&name=" + name + ">送信</a>");
+document.write("<a href=http://yumaabckhh.php.xdomain.jp/h.php?get=" + month + "月" + day + "日" + "%3Cbr%3E" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu + ">送信</a>");
 }
 </script>
 
 
 var name = getParam('name')
+
+"&name=" + name + 
