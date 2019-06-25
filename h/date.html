@@ -8,6 +8,8 @@ window.alert("許可押してね");
 
 //var name = getParam('name');
 
+var name = urlParams.get('name');
+
 var today = new Date();
 var month = today.getMonth() + 1;
 var day = today.getDate();
@@ -25,6 +27,5 @@ navigator.geolocation.getCurrentPosition( (position) => {
 
 function displayData(lat, lng, accu){
 document.write("<a href=http://yumaabckhh.php.xdomain.jp/h.php?get=" + month + "月" + day + "日" + "%3Cbr%3E" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu + "&name=" + name + ">送信</a>");
-console.log(urlParams.get('name'));
 }
 </script>
