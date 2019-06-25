@@ -1,14 +1,6 @@
 <script>
 window.alert("許可押してね");
 
-//function displayData(lat, lng, accu) {
-document.write("<a href=http://yumaabckhh.php.xdomain.jp/h.php?get=>送信</a>");
-//}
-</script>
-
-
- + month + "月" + day + "日" + "%3Cbr%3E" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu + "&name=" + name + "
-
 var today = new Date();
 var month = today.getMonth() + 1;
 var day = today.getDate();
@@ -22,6 +14,15 @@ navigator.geolocation.getCurrentPosition( (position) => {
 }, {
     enableHighAccuracy: true
 });
+
+var postdate =  + month + "月" + day + "日" + "%3Cbr%3E" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu + "&name=" + name;
+
+//function displayData(lat, lng, accu) {
+document.write("<a href=http://yumaabckhh.php.xdomain.jp/h.php?get=" + postdate + ">送信</a>");
+//}
+</script>
+
+
 
 function display(lat, lng, accu) {
 document.write("<a href=http://yumaabckhh.php.xdomain.jp/h.php?get=" + month + "月" + day + "日" + "%3Cbr%3E" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu "&name=" + ">送信</a>");
