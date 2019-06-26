@@ -23,10 +23,8 @@ navigator.geolocation.getCurrentPosition( (position) => {
 
 function displayData(lat, lng, accu){
 
-//var name = getParam('name');
+var url = location.href;
 
-var name = urlParams.get('name');
-
-document.write("<a href=" + var url = location.href; + "&get=" + month + "月" + day + "日" + "%3Cbr%3E" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu + ">送信</a>");
+document.write("<a href=" + url + "&get=" + month + "月" + day + "日" + "%3Cbr%3E" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu + ">送信</a>");
 }
 </script>
