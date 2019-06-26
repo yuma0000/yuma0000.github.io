@@ -7,10 +7,16 @@
 
 <input type="text" name="name">
 <script>
-var date = "date.html?"
-var name = 'text:', form.name.value;
-document.write("<a href="+ date + "name=" + name + ">送信する</a>");
+//var date = "date.html?"
+//var name = 'text:', form.name.value;
+//document.write("<a href="+ date + "name=" + name + ">送信する</a>");
 
+
+$(function() {
+    var name = $('input[name="name"]');
+ 
+    console.log( name[0] );
+});
 </script>
 </body>
 </html>
