@@ -4,13 +4,10 @@
 </head>
 <body>
 <h1>登録ページ</h1>
-<form method="post" action="load.html">
 <input type="text" name="name">
-<input type="submit" value="送信">
-</form>
 <input type="button" value="実行" onClick="post()">
 <script>
-var name = e.parameter.name;
+var name = document.getElementById('name').value;
 function post(){
 location.href = ("date.html?name=" + name);
 }
