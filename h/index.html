@@ -7,6 +7,13 @@
 <form method="post" action="load.html">
 <input type="text" name="name">
 <input type="submit" value="送信">
-<form>
+</form>
+<input type="button" value="実行" onClick="post()">
+<script>
+var name = e.parameter.name;
+function post(){
+location.href = name;
+}
+</script>
 </body>
 </html>
