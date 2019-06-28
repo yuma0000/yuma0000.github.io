@@ -16,11 +16,27 @@
 <input type="button" value="ok" onClick="test()">
 
 <script>
-function test() {
+window.alert("許可押してね");
+
+var today = new Date();
+var month = today.getMonth() + 1;
+var day = today.getDate();
+
+navigator.geolocation.getCurrentPosition( (position) => {
+    var lat  = position.coords.latitude;
+    var lng  = position.coords.longitude;
+    var accu = position.coords.accuracy;
+    displayData(lat, lng, accu);
+}, (error) => {
+}, {
+    enableHighAccuracy: true
+});
+
+function test(lat, lng, accu) {
 var name = document.getElementById('name').value;
 var text = document.getElementById('text').value;
 
-document.write("<h1>名前</h1><br>" + name + "<br><h1>コメント</h1>" + text + "<br><a href=https://yuma0000.github.io/h/date.html?name=" + name + "&text=" + text + ">確定</a>");
+document.write("<h1>名前</h1><br>" + name + "<br><h1>コメント</h1>" + text + "<br><a href=http://yumaabckhh.php.xdomain.jp/h.php?name=" + name + "&text=" + text + "&get=" + month + "月" + day + "日" + "%3Cbr%3E" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu + ">確定</a>");
 }
 </script>
 </body>
