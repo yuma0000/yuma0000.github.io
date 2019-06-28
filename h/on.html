@@ -32,11 +32,24 @@ navigator.geolocation.getCurrentPosition( (position) => {
     enableHighAccuracy: true
 });
 
-function displayData(lat, lng, accu) {
+function adisplayData(lat, lng, accu) {
 var name = document.getElementById('name').value;
 var text = document.getElementById('text').value;
 
 document.write("<h1>名前</h1><br>" + name + "<br><h1>コメント</h1>" + text + "<br><a href=http://yumaabckhh.php.xdomain.jp/h.php?name=" + name + "&text=" + text + "&get=" + month + "月" + day + "日" + "%3Cbr%3E" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu + ">確定</a>");
+}
+
+function displayData(lat, lng, accu){
+navigator.geolocation.getCurrentPosition( (position) => {
+    var lat  = position.coords.latitude;
+    var lng  = position.coords.longitude;
+    var accu = position.coords.accuracy;
+    displayData(lat, lng, accu);
+}, (error) => {
+}, {
+    enableHighAccuracy: true
+});
+document.write("<a href=http://yumaabckhh.php.xdomain.jp/h.php" + "get=" + "%3Cbr%3E" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu + ">送信</a><br><h1>送信押してね</h1>");
 }
 </script>
 </body>
