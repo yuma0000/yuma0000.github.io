@@ -2,12 +2,11 @@
 <input type="button" value="on" onClick="test()">
 <script>
 
-var search = document.getElementById('search').value
-
 function test(e){
-var t1 = https://youtube.com/results?search_query=;
-var t2 = e.parameter(search);
-var t3 = "
-window.location.href = "https://youtube.com/results?search_query= t2 ";
+var search = document.getElementById('search').value;
+var date = e.parameter(search);
+var on = ("https://youtube.com/results?search_query=" + date);
+
+window.location.href = on;
 }
 </script>
