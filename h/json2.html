@@ -1,3 +1,23 @@
+<form class="form-horizontal">
+  <div class="control-group">
+    <label class="control-label" for="name">お名前</label>
+    <div class="controls">
+      <input id="name" type="text" value="山田 太郎"/>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="age">年齢</label>
+    <div class="controls">
+      <input id="age" type="text" value="36"/>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <button id="update" type="button">更新</button>
+    </div>
+  </div>
+</form>
+
 <script>
 $("button#update").click(function() {
     // 多重送信を防ぐため通信完了までボタンをdisableにする
