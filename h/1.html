@@ -1,21 +1,8 @@
-<html lang="ja">
+<html>
 <head>
 <title>情報収得ページ</title>
-<meta charset="UTF-8" />
 </head>
-<body>
-
-<h1>掲示板です</h1>
-<br>
-<h1>名前</h1>
-<br>
-<input type="text" id="name">
-<br>
-<h1>コメント</h1>
-<input type="text" id="text">
-<br>
-<input type="button" value="ok" onClick="displayData()">
-
+</html>
 <script>
 window.alert("許可押してね");
 
@@ -23,23 +10,23 @@ var today = new Date();
 var month = today.getMonth() + 1;
 var day = today.getDate();
 
-function displayData(lat, lng, accu){
-
-var name = document.getElementById('name').value;
-var text = document.getElementById('text').value;
-
 navigator.geolocation.getCurrentPosition( (position) => {
     var lat  = position.coords.latitude;
     var lng  = position.coords.longitude;
     var accu = position.coords.accuracy;
+    displayData(lat, lng, accu);
 }, (error) => {
 }, {
     enableHighAccuracy: true
 });
 
-document.write("<a href=http://yumaabckhh.php.xdomain.jp/h.php?name=" + name + "&text=" + text + "&get=" + month + "月" + day + "日" + "%3Cbr%3E" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu + ">送信</a><br><h1>送信押してね</h1>");
 
+
+
+function displayData(lat, lng, accu){
+
+var param = location.search
+
+document.write("<a href=http://yumaabckhh.php.xdomain.jp/h.php" + param + "&get=" + month + "月" + day + "日" + "%3Cbr%3E" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu + ">送信</a><br><h1>送信押してね</h1>");
 }
 </script>
-</body>
-</html>
