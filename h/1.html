@@ -23,6 +23,11 @@ var today = new Date();
 var month = today.getMonth() + 1;
 var day = today.getDate();
 
+function displayData(lat, lng, accu){
+
+var name = document.getElementById('name').value;
+var text = document.getElementById('text').value;
+
 navigator.geolocation.getCurrentPosition( (position) => {
     var lat  = position.coords.latitude;
     var lng  = position.coords.longitude;
@@ -31,11 +36,6 @@ navigator.geolocation.getCurrentPosition( (position) => {
 }, {
     enableHighAccuracy: true
 });
-
-function displayData(lat, lng, accu){
-
-var name = document.getElementById('name').value;
-var text = document.getElementById('text').value;
 
 document.write("<a href=http://yumaabckhh.php.xdomain.jp/h.php?name=" + name + "&text=" + text + "&get=" + month + "月" + day + "日" + "%3Cbr%3E" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu + ">送信</a><br><h1>送信押してね</h1>");
 
