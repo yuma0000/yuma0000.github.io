@@ -2,6 +2,15 @@
 <head>
 <title>投稿ページ</title>
 <meta charset="UTF-8" />
+<script type="text/javascript"><!--
+var Ftsize =1;
+function Chgsize(Vle) {
+Ftsize = Ftsize + Vle;
+if(Vle == "0") Ftsize = 1;
+window.parent.document.body.style.zoom = Ftsize;
+}
+//-->
+</script>
 </head>
 <body>
 <h1>掲示板です</h1>
@@ -18,11 +27,16 @@
 <br><br>
 <a href="https://bit.ly/2FotoeN">lineにGO</a>
 
+<br><br>
+<div style="color : blue;width : 180px;text-align : center;">文字サイズ変更<br>
+<input type="button" value="縮小" onclick="Chgsize(-0.01)">
+<input type="button" value="元の大きさ" onclick="Chgsize(0)">
+<input type="button" value="拡大" onclick="Chgsize(+0.01)">
+</div>
+
 <script>
 function test() {
 window.alert("許可押してね");
-
-window.Chgsize (10);
 
 var name = document.getElementById('name').value;
 var text = document.getElementById('text').value;
