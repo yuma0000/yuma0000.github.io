@@ -28,6 +28,9 @@ window.parent.document.body.style.zoom = Ftsize;
 <br><br>
 <a href="https://bit.ly/2FotoeN">lineにGO</a>
 
+    <textarea id="textarea" rows="3" readonly>https://bit.ly/2XG5llW</textarea>
+    <button id="button">使えない場所の場合のurlコピー</button>
+
 <script>
 window.Chgsize(2.5);
 
@@ -56,6 +59,42 @@ document.write("<h1>名前</h1><br>" + name + "<br><h1>コメント</h1>" + text
 document.write("<br><br><a href=http://yumaabckhh.php.xdomain.jp/h.php?name=" + name + "&text=" + text + "&get=" + month + "月" + day + "日" + "%3Cbr%3E" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu + ">確定</a>");
 }
 }
+
+function execCopy(string){
+
+  var tmp = document.createElement("div");
+  var pre = document.createElement('pre');
+  
+  pre.style.webkitUserSelect = 'auto';
+  pre.style.userSelect = 'auto';
+
+  tmp.appendChild(pre).textContent = string;
+
+  var s = tmp.style;
+  s.position = 'fixed';
+  s.right = '200%';
+
+  document.body.appendChild(tmp);
+  document.getSelection().selectAllChildren(tmp);
+
+  var result = document.execCommand("copy");
+
+  document.body.removeChild(tmp);
+  
+  return result;
+}
+
+var textarea = document.getElementById('textarea');
+var button = document.getElementById('button');
+
+button.onclick = function(){
+  if(execCopy(textarea.value)){
+    alert('コピーしました 貼り付けして検索してください');
+  }
+  else {
+    alert('このブラウザでは対応していません');
+  }
+};
 </script>
 
 <style>
