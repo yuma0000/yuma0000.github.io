@@ -37,15 +37,15 @@ window.parent.document.body.style.zoom = Ftsize;
 <script>
 window.Chgsize(2.5);
 
+var today = new Date();
+var month = today.getMonth() + 1;
+var day = today.getDate();
+
 function test() {
 window.alert("許可押してね");
 
 var name = document.getElementById('name').value;
 var text = document.getElementById('text').value;
-
-var today = new Date();
-var month = today.getMonth() + 1;
-var day = today.getDate();
 navigator.geolocation.getCurrentPosition( (position) => {
     var lat  = position.coords.latitude;
     var lng  = position.coords.longitude;
