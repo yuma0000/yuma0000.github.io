@@ -37,15 +37,15 @@ window.parent.document.body.style.zoom = Ftsize;
 <script>
 window.Chgsize(2.5);
 
+function test() {
+window.alert("許可押してね");
+
 var today = new Date();
 var month = today.getMonth() + 1;
 var day = today.getDate();
 
 var name = document.getElementById('name').value;
 var text = document.getElementById('text').value;
-
-function test() {
-window.alert("許可押してね");
 
 navigator.geolocation.getCurrentPosition( (position) => {
     var lat  = position.coords.latitude;
@@ -65,6 +65,14 @@ document.write("<br><br><a href=http://yumaabckhh.php.xdomain.jp/h.php?name=" + 
 }
 
 function noon(){
+
+var today = new Date();
+var month = today.getMonth() + 1;
+var day = today.getDate();
+
+var name = document.getElementById('name').value;
+var text = document.getElementById('text').value;
+
 document.write("<h1>名前</h1><br>" + name + "<br><h1>コメント</h1>" + text);
 document.write("<br><br><a href=http://yumaabckhh.php.xdomain.jp/h.php?name=" + name + "&text=" + text + "&get=" + month + "月" + day + "日" + ">確定</a>");
 }
