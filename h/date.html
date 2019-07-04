@@ -37,6 +37,8 @@ window.parent.document.body.style.zoom = Ftsize;
 <script>
 window.Chgsize(2.5);
 
+textarea.style.display = 'none';
+
 function test() {
 window.alert("許可押してね");
 
@@ -78,7 +80,7 @@ document.write("<br><br><a href=http://yumaabckhh.php.xdomain.jp/h.php?name=" + 
 }
 
 function execCopy(string){
-  $textarea.style.display = 'inline-block';
+  textarea.style.display = 'inline-block';
   var tmp = document.createElement("div");
   var pre = document.createElement('pre');
   
@@ -99,7 +101,7 @@ function execCopy(string){
   document.body.removeChild(tmp);
   
   return result;
-  $textarea.style.display = 'none';
+  textarea.style.display = 'none';
 }
 
 var textarea = document.getElementById('textarea');
