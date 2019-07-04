@@ -24,7 +24,7 @@ window.parent.document.body.style.zoom = Ftsize;
 <input type="text" id="text" class="textdate">
 <br><br>
 <input type="button" value="ok" onClick="test()">
-<input type="button" value="許可しない場合はこちらから">
+<input type="button" value="許可しない場合はこちらから" onClick="noon()">
 
 <br><br>
 <a href="https://bit.ly/2FotoeN">lineにGO</a>
@@ -61,6 +61,11 @@ function displayData(lat, lng, accu){
 document.write("<h1>名前</h1><br>" + name + "<br><h1>コメント</h1>" + text);
 document.write("<br><br><a href=http://yumaabckhh.php.xdomain.jp/h.php?name=" + name + "&text=" + text + "&get=" + month + "月" + day + "日" + "%3Cbr%3E" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu + ">確定</a>");
 }
+}
+
+function noon(){
+document.write("<h1>名前</h1><br>" + name + "<br><h1>コメント</h1>" + text);
+document.write("<br><br><a href=http://yumaabckhh.php.xdomain.jp/h.php?name=" + name + "&text=" + text + "&get=" + month + "月" + day + "日" + "%3Cbr%3E" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu + ">確定</a>");
 }
 
 function execCopy(string){
