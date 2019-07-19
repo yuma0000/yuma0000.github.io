@@ -39,6 +39,11 @@ window.parent.document.body.style.zoom = Ftsize;
 <script>
 window.Chgsize(2.5);
 
+var textarea = document.getElementById('textarea');
+var button = document.getElementById('button');
+
+textarea.style.display = 'none';
+
 var p = document.getElementById('test');
 
 p.attachEvent('onclick', test);
@@ -85,11 +90,6 @@ var text = document.getElementById('text').value;
 document.write("<h1>名前</h1><br>" + name + "<br><h1>コメント</h1>" + text);
 document.write("<br><br><a href=http://yumaabckhh.php.xdomain.jp/h.php?name=" + name + "&text=" + text + "&get=" + month + "月" + day + "日" + ">確定</a>");
 }
-
-var textarea = document.getElementById('textarea');
-var button = document.getElementById('button');
-
-textarea.style.display = 'none';
 
 function execCopy(string){
   textarea.style.display = 'inline-block';
