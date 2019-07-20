@@ -31,7 +31,7 @@ window.parent.document.body.style.zoom = Ftsize;
 </table>
 
 <br><br>
-    <button onClick="">ここを押してurlをコピー出来ます</button>
+    <button onClick="button()">ここを押してurlをコピー出来ます</button>
 <a onClick="button()"><img src="無題186.png" header="150" width="150"></a>
 <textarea id="textarea" rows="3" readonly>https://bit.ly/2XG5llW</textarea>
 <br><br>
@@ -70,7 +70,6 @@ document.write("<h1>名前</h1><br>" + name + "<br><h1>コメント</h1>" + text
 document.write("<br><br><a href=http://yumaabckhh.php.xdomain.jp/h.php?name=" + name + "&text=" + text + "&get=" + month + "月" + day + "日" + ">確定</a>");
 }
 var textarea = document.getElementById('textarea');
-var button = document.getElementById('button');
 textarea.style.display = 'none';
 function execCopy(string){
   textarea.style.display = 'inline-block';
