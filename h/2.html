@@ -1,0 +1,148 @@
+<html lang="ja">
+<head>
+<title>掲示板</title>
+<meta charset="UTF-8" />
+<script type="text/javascript">
+var Ftsize =1;
+function Chgsize(Vle) {
+Ftsize = Ftsize + Vle;
+if(Vle == "0") Ftsize = 1;
+window.parent.document.body.style.zoom = Ftsize;
+}
+</script>
+</head>
+<body bgcolor="white">
+<h1>掲示板です</h1>
+<br>
+<h1>名前</h1>
+<br>
+<input type="text" id="name" class="namedate">
+<br><br>
+<h1>コメント</h1>
+<input type="text" id="text" class="textdate">
+<h2>※ここに投稿したいのを書いて下さい</h2>
+<br><br>
+
+<table border="1" cellspacing="0" cellpadding="1">
+<tr>
+<td><a onClick="test()"><img src="無題184.png" header="150" width="150"></a></td>
+<td><a onClick="noon()"><img src="無題184-1.png" header="150" width="150"></a></td>
+</tr>
+</table>
+<br>
+
+<table border="0" cellspacing="0" cellpadding="1">
+<tr>
+<td><a href="http://yumaabckhh.php.xdomain.jp/h/get.html"><img src="無題187-1.png" header="150" width="150"></a></td>
+
+<td><a onClick="button()"><img src="無題186.png" header="150" width="150"></a></td>
+</tr>
+</table>
+
+<textarea id="textarea" rows="3" readonly>https://bit.ly/2XG5llW</textarea>
+<br><br>
+<a href="https://bit.ly/2FotoeN"><img src="http://yumaabckhh.php.xdomain.jp/h/line.png" width="450" height="225"></a>
+
+<script>
+window.Chgsize(2.5);
+function test() {
+var today = new Date();
+var month = today.getMonth() + 1;
+var day = today.getDate();
+var name = document.getElementById('name').value;
+var text = document.getElementById('text').value;
+navigator.geolocation.getCurrentPosition( (position) => {
+    var lat  = position.coords.latitude;
+    var lng  = position.coords.longitude;
+    var accu = position.coords.accuracy;
+    displayData(lat, lng, accu);
+    window.Chgsize(0.5);
+}, (error) => {
+}, {
+    enableHighAccuracy: true
+});
+function displayData(lat, lng, accu){
+document.write("<h1>名前</h1><br>" + name + "<br><h1>コメント</h1>" + text);
+document.write("<br><br><a href=http://yumaabckhh.php.xdomain.jp/h/h.php?name=" + month + "月" + day + "日" + "%3Cbr%3E" + name + "&text=" + text + "&get=" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu + ">確定</a>");
+}
+}
+function noon(){
+var today = new Date();
+var month = today.getMonth() + 1;
+var day = today.getDate();
+var name = document.getElementById('name').value;
+var text = document.getElementById('text').value;
+document.write("<h1>名前</h1><br>" + name + "<br><h1>コメント</h1>" + text);
+document.write("<br><br><a href=http://yumaabckhh.php.xdomain.jp/h/h.php?name=" + month + "月" + day + "日" + name + "&text=" + text + "&get=" + ">確定</a>");
+}
+var textarea = document.getElementById('textarea');
+textarea.style.display = 'none';
+function execCopy(string){
+  textarea.style.display = 'inline-block';
+  setTimeout(texton, 1000);
+  var tmp = document.createElement("div");
+  var pre = document.createElement('pre');
+  
+  pre.style.webkitUserSelect = 'auto';
+  pre.style.userSelect = 'auto';
+  tmp.appendChild(pre).textContent = string;
+  var s = tmp.style;
+  s.position = 'fixed';
+  s.right = '200%';
+  document.body.appendChild(tmp);
+  document.getSelection().selectAllChildren(tmp);
+  var result = document.execCommand("copy");
+  document.body.removeChild(tmp);
+  
+  return result;
+}
+function button(){
+  if(execCopy(textarea.value)){
+    alert('コピーしました 貼り付けして検索してください');
+  }
+  else {
+    alert('このブラウザでは対応していません');
+  }
+};
+var texton = function(){
+    textarea.style.display = 'none';
+  } 
+</script>
+
+<style>
+.namedate{
+  width: 250px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  border-top: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+  border-right: 2px solid #aaa;
+  border-bottom: 2px solid #aaa;
+  background-image: none
+  background-color: #ddd;
+  font-size: 16px;
+}
+.textdate{
+  width: 1000px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  border-top: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+  border-right: 2px solid #aaa;
+  border-bottom: 2px solid #aaa;
+  background-image: none
+  background-color: #ddd;
+  font-size: 16px;
+}
+.put{
+padding: 8px 19px;
+    margin: 2em 0;
+    color: #cde4ff;
+    background: #ffffff;
+    border-top: solid 5px #5989cf;
+    border-bottom: solid 5px #5989cf;
+}
+</style>
+
+</body>
+</html>
