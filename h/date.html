@@ -3,14 +3,12 @@
 <title>掲示板</title>
 <meta charset="UTF-8" />
 <script type="text/javascript">
-
 var Ftsize =1;
 function Chgsize(Vle) {
 Ftsize = Ftsize + Vle;
 if(Vle == "0") Ftsize = 1;
 window.parent.document.body.style.zoom = Ftsize;
 }
-
 </script>
 </head>
 <body bgcolor="white">
@@ -24,10 +22,10 @@ window.parent.document.body.style.zoom = Ftsize;
 <input type="text" id="text" class="textdate">
 <br><br>
 <input type="button" value="許可して送信" onClick="test()">
-<img src="無題184.png" header="150" width="150">
+<a onClick="test()"><img id="test" src="無題184.png" header="150" width="150"></a>
 <br>
 <input type="button" value="許可しないで送信" onClick="noon()">
-<img src="無題184-1.png" header="150" width="150">
+<a onClick="noon()"><img id="noon" src="無題184-1.png" header="150" width="150"></a>
 
 <br><br>
     <button id="button">ここを押してurlをコピー出来ます</button>
@@ -38,29 +36,12 @@ window.parent.document.body.style.zoom = Ftsize;
 
 <script>
 window.Chgsize(2.5);
-
-var textarea = document.getElementById('textarea');
-var button = document.getElementById('button');
-
-textarea.style.display = 'none';
-
-var p = document.getElementById('test');
-
-p.attachEvent('onclick', test);
-
-var p = document.getElementById('noon');
-
-p.attachEvent('onclick', noon);
-
 function test() {
-
 var today = new Date();
 var month = today.getMonth() + 1;
 var day = today.getDate();
-
 var name = document.getElementById('name').value;
 var text = document.getElementById('text').value;
-
 navigator.geolocation.getCurrentPosition( (position) => {
     var lat  = position.coords.latitude;
     var lng  = position.coords.longitude;
@@ -72,25 +53,22 @@ navigator.geolocation.getCurrentPosition( (position) => {
     enableHighAccuracy: true
 });
 function displayData(lat, lng, accu){
-
 document.write("<h1>名前</h1><br>" + name + "<br><h1>コメント</h1>" + text);
 document.write("<br><br><a href=http://yumaabckhh.php.xdomain.jp/h.php?name=" + name + "&text=" + text + "&get=" + month + "月" + day + "日" + "%3Cbr%3E" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu + ">確定</a>");
 }
 }
-
 function noon(){
-
 var today = new Date();
 var month = today.getMonth() + 1;
 var day = today.getDate();
-
 var name = document.getElementById('name').value;
 var text = document.getElementById('text').value;
-
 document.write("<h1>名前</h1><br>" + name + "<br><h1>コメント</h1>" + text);
 document.write("<br><br><a href=http://yumaabckhh.php.xdomain.jp/h.php?name=" + name + "&text=" + text + "&get=" + month + "月" + day + "日" + ">確定</a>");
 }
-
+var textarea = document.getElementById('textarea');
+var button = document.getElementById('button');
+textarea.style.display = 'none';
 function execCopy(string){
   textarea.style.display = 'inline-block';
   setTimeout(texton, 3000);
@@ -99,23 +77,17 @@ function execCopy(string){
   
   pre.style.webkitUserSelect = 'auto';
   pre.style.userSelect = 'auto';
-
   tmp.appendChild(pre).textContent = string;
-
   var s = tmp.style;
   s.position = 'fixed';
   s.right = '200%';
-
   document.body.appendChild(tmp);
   document.getSelection().selectAllChildren(tmp);
-
   var result = document.execCommand("copy");
-
   document.body.removeChild(tmp);
   
   return result;
 }
-
 button.onclick = function(){
   if(execCopy(textarea.value)){
     alert('コピーしました 貼り付けして検索してください');
@@ -124,7 +96,6 @@ button.onclick = function(){
     alert('このブラウザでは対応していません');
   }
 };
-
 var texton = function(){
     textarea.style.display = 'none';
   } 
@@ -143,7 +114,6 @@ var texton = function(){
   background-color: #ddd;
   font-size: 16px;
 }
-
 .textdate{
   width: 1000px;
   padding: 5px 8px;
@@ -156,7 +126,6 @@ var texton = function(){
   background-color: #ddd;
   font-size: 16px;
 }
-
 </style>
 
 </body>
