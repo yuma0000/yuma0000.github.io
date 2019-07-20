@@ -63,7 +63,7 @@ navigator.geolocation.getCurrentPosition( (position) => {
 });
 function displayData(lat, lng, accu){
 document.write("<h1>名前</h1><br>" + name + "<br><h1>コメント</h1>" + text);
-document.write("<br><br><a href=http://yumaabckhh.php.xdomain.jp/h/h.php?name=" + month + "月" + day + "日" + "%3Cbr%3E" + name + "&text=" + text + "&get=" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu + ">確定</a>");
+document.write("<br><br><a href=http://yumaabckhh.php.xdomain.jp/h/h.php?name=" + month + "月" + day + "日" + "%3Cbr%3E" + "名前" + name + "&text=" + text + "&get=" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu + ">確定</a>");
 }
 }
 function noon(){
@@ -73,7 +73,7 @@ var day = today.getDate();
 var name = document.getElementById('name').value;
 var text = document.getElementById('text').value;
 document.write("<h1>名前</h1><br>" + name + "<br><h1>コメント</h1>" + text);
-document.write("<br><br><a href=http://yumaabckhh.php.xdomain.jp/h/h.php?name=" + month + "月" + day + "日" + name + "&text=" + text + "&get=" + ">確定</a>");
+document.write("<br><br><a href=http://yumaabckhh.php.xdomain.jp/h/h.php?name=" + month + "月" + day + "日" + "%3Cbr%3E" + "名前" + name + "&text=" + text + "&get=" + ">確定</a>");
 }
 var textarea = document.getElementById('textarea');
 textarea.style.display = 'none';
