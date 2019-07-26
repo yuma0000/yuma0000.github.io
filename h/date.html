@@ -45,11 +45,11 @@ window.parent.document.body.style.zoom = Ftsize;
       <p>
         名前
       </p>
-      <input type="text" name="title">
+      <input type="text" name="title" class="mail">
       <p>
         text(返信用のメアドなども書いて下さい)
       </p>
-      <textarea name="content" cols="50" rows="5"></textarea>
+      <textarea name="content"  class="mail" cols="50" rows="5"></textarea>
       <p>
         <input type="submit" name="send" value="送信">
       </p>
@@ -159,6 +159,19 @@ padding: 8px 19px;
     background: #ffffff;
     border-top: solid 5px #5989cf;
     border-bottom: solid 5px #5989cf;
+}
+
+.mail{
+  width: 250px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  border-top: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+  border-right: 2px solid #aaa;
+  border-bottom: 2px solid #aaa;
+  background-image: none
+  background-color: #ddd;
+  font-size: 16px;
 }
 </style>
 
