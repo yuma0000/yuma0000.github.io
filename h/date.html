@@ -126,20 +126,11 @@ var texton = function(){
     textarea.style.display = 'none';
   } 
 
-function mail2(){
-alert("ok")
-document.write("<h1>http://yumaabckhh.php.xdomain.jp/h/mail.php 名前" + mailtitle + "text" + mailcontent + "返信用" + mailcc + "</h1>");
-document.write("<h1>名前</h1><br>" + name + "<br><h1>コメント</h1>" + text);
-}
-
 function mail(){
-var today = new Date();
-var month = today.getMonth() + 1;
-var day = today.getDate();
-var name = document.getElementById('name').value;
-var text = document.getElementById('text').value;
-document.write("<h1>名前</h1><br>" + name + "<br><h1>コメント</h1>" + text);
-document.write("<br><br><a href=http://yumaabckhh.php.xdomain.jp/h/h.php?name=" + month + "月" + day + "日" + "%3Cbr%3E" + "名前" + "%3Cbr%3E" + name + "&text=" + text + "><button>確定</button></a>");
+var mailtitle = document.getElementById('mailtitle').value;
+var mailcontent = document.getElementById('mailcontent').value;
+var mailcc = document.getElementById('mailcc').value;
+document.write("<h1>名前" + mailtitle + "text" + mailcontent + "返信用" + mailcc + "</h1>");
 window.Chgsize(0.5);
 window.document.bgColor = "white";
 }
