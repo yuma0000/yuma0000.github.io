@@ -45,16 +45,17 @@ window.parent.document.body.style.zoom = Ftsize;
       <p>
         名前
       </p>
-      <input type="text" name="title" class="mail">
+      <input type="text" name="mailtitle" class="mail">
       <p>
         text(返信用のメアドなども書いて下さい)
       </p>
-      <textarea name="content"  class="mail2" cols="50" rows="5"></textarea>
-      <textarea name="cc"  class="mail2" cols="50" rows="5"></textarea>
+      <textarea name="mailcontent"  class="mail2" cols="50" rows="5"></textarea>
+      <textarea name="mailcc"  class="mail2" cols="50" rows="5"></textarea>
       <br>
       <br>
       <p>
         <input type="submit" name="send" value="送信">
+<a onClick="mail()"><button>送信</button></a>
       </p>
     </form>
 
@@ -129,6 +130,10 @@ function button(){
 var texton = function(){
     textarea.style.display = 'none';
   } 
+
+function mail(){
+document.write("名前" + mailtitle + "text" + mailcontent + "返信用" + mailcc);
+}
 </script>
 
 <style>
