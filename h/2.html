@@ -5,12 +5,6 @@
 <body>
 <input type="text" name="text">
 
-<br>
-      <br>
-      <br>
-<script>
-</script>
-
 <br><br>
 
 <h1>掲示板です</h1>
@@ -29,13 +23,7 @@
 <td><a onClick="noon()"><img src="無題191.png" header="150" width="150"></a></td>
 </tr>
 </table>
-<br>
-
-<br>
-
 <script>
-window.Chgsize(2.5);
-
 function noon(){
 var today = new Date();
 var month = today.getMonth() + 1;
@@ -46,28 +34,6 @@ document.write("<h1>名前</h1><br>" + name + "<br><h1>コメント</h1>" + text
 document.write("<br><br><a href=http://yumaabckhh.php.xdomain.jp/h/h.php?name=" + month + "月" + day + "日" + "%3Cbr%3E" + "名前" + "%3Cbr%3E" + name + "&text=" + text + "><button>確定</button></a>");
 window.Chgsize(0.5);
 window.document.bgColor = "white";
-}
-var textarea = document.getElementById('textarea');
-textarea.style.display = 'none';
-function execCopy(string){
-  textarea.style.display = 'inline-block';
-  setTimeout(texton, 1000);
-  var tmp = document.createElement("div");
-  var pre = document.createElement('pre');
-  
-  pre.style.webkitUserSelect = 'auto';
-  pre.style.userSelect = 'auto';
-  tmp.appendChild(pre).textContent = string;
-  var s = tmp.style;
-  s.position = 'fixed';
-  s.right = '200%';
-  document.body.appendChild(tmp);
-  document.getSelection().selectAllChildren(tmp);
-  var result = document.execCommand("copy");
-  document.body.removeChild(tmp);
-  
-  return result;
-}
 </script>
 </body>
 </html>
