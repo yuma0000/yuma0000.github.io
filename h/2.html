@@ -6,10 +6,16 @@
 <input type="text" name="text">
 <a onClick="load()"><img src="無題191.png" header="150" width="150"></a></td>
 <script>
-function load(){
+function load2(){
 alert("a")；
 var text = document.getElementById(text)；
 document.write(window.location.href= + text)；
+}
+
+function load(){
+var text = document.getElementById(text)；
+document.write("<h1>名前</h1><br>" + name + "<br><h1>コメント</h1>" + text);
+document.write("<br><br><a href=http://yumaabckhh.php.xdomain.jp/h/h.php?name=" + month + "月" + day + "日" + "%3Cbr%3E" + "名前" + "%3Cbr%3E" + name + "&text=" + text + "><button>確定</button></a>");
 }
 </script>
 </body>
