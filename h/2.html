@@ -5,6 +5,7 @@
 <body>
 <input type="text" name="text">
 <a onClick="load()"><img src="無題191.png" header="150" width="150"></a></td>
+<a onClick="mail()"><img src="無題191.png" header="150" width="150"></a></td>
 <script>
 function load2(){
 alert("a")；
@@ -16,6 +17,16 @@ function load(){
 var text = document.getElementById(text)；
 document.write("<h1>名前</h1><br>" + name + "<br><h1>コメント</h1>" + text);
 document.write("<br><br><a href=http://yumaabckhh.php.xdomain.jp/h/h.php?name=" + month + "月" + day + "日" + "%3Cbr%3E" + "名前" + "%3Cbr%3E" + name + "&text=" + text + "><button>確定</button></a>");
+}
+
+function mail(){
+var mailtitle = document.getElementById('text').value;
+var mailcontent = document.getElementById('text').value;
+var mailcc = document.getElementById('text').value;
+document.write("<h1>名前</h1><br>" + mailtitle + "<br><h1>text</h1><br>" + mailcontent + "<br><h1>返信用</h1><br>" + mailcc + "<br>");
+document.write("<a href=http://yumaabckhh.php.xdomain.jp/h/mail.php?title=" + mailtitle + "&content=" + mailcc + "text" + mailcontent + ">送信</a>");
+window.Chgsize(0.5);
+window.document.bgColor = "white";
 }
 </script>
 </body>
