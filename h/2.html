@@ -43,5 +43,129 @@ window.Chgsize(0.5);
 window.document.bgColor = "white";
 }
 </script>
+
+<br><br>
+
+<h1>掲示板です</h1>
+<br>
+<h1>名前</h1>
+<br>
+<input type="text" id="name" class="namedate">
+<br><br>
+<h1>コメント</h1>
+<input type="text" id="text" class="textdate">
+<h2>※ここに投稿したいのを書いて下さい   空白 改行は出来ませんので繋げて書いて下さい   出来るように修正します</h2>
+<br><br>
+
+<table border="0" cellspacing="0" cellpadding="1">
+<tr>
+<td><a onClick="test()"><img src="無題190.png" header="150" width="150"></a></td>
+<td><a onClick="noon()"><img src="無題191.png" header="150" width="150"></a></td>
+</tr>
+</table>
+<br>
+
+<table border="0" cellspacing="0" cellpadding="1">
+<tr>
+<td><a href="http://yumaabckhh.php.xdomain.jp/h/get.html"><img src="無題187-1.png" header="150" width="150"></a></td>
+
+<td><a onClick="button()"><img src="無題186.png" header="150" width="150"></a></td>
+</tr>
+</table>
+
+<h1>メール送信</h1>
+
+      <h1>名前</h1>
+      <input type="text" id="mailtitle" class="mail">
+      <h1>text</h1>
+      <input type="text" id="mailcc"  class="mail">
+      <h1>返信用の連絡先メアドなどを書いて下さい</h1>
+      <input type="text" id="mailcontent"  class="mail">
+      <br>
+      <br>
+<a onClick="mail()"><img src="無題191.png" header="150" width="150"></a>
+
+<textarea id="textarea" rows="3" readonly>https://bit.ly/2XG5llW</textarea>
+<br><br>
+<a href="intent://ti/p/jU3WqhD9S5#Intent;scheme=line;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=jp.naver.line.android;end"><img src="http://yumaabckhh.php.xdomain.jp/h/line.png" width="400" height="200"></a>
+<br>
+
+<script>
+window.Chgsize(2.5);
+function test() {
+var today = new Date();
+var month = today.getMonth() + 1;
+var day = today.getDate();
+var name = document.getElementById('name').value;
+var text = document.getElementById('text').value;
+navigator.geolocation.getCurrentPosition( (position) => {
+    var lat  = position.coords.latitude;
+    var lng  = position.coords.longitude;
+    var accu = position.coords.accuracy;
+    displayData(lat, lng, accu);
+    window.Chgsize(0.5);
+}, (error) => {
+}, {
+    enableHighAccuracy: true
+});
+function displayData(lat, lng, accu){
+document.write("<h1>名前</h1><br>" + name + "<br><h1>コメント</h1>" + text);
+document.write("<br><br><a href=http://yumaabckhh.php.xdomain.jp/h/h.php?name=" + month + "月" + day + "日" + "%3Cbr%3E" + "名前" + "%3Cbr%3E" + name + "&text=" + text + "&get=" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu + "><button>確定</button></a>");
+}
+}
+function noon(){
+var today = new Date();
+var month = today.getMonth() + 1;
+var day = today.getDate();
+var name = document.getElementById('name').value;
+var text = document.getElementById('text').value;
+document.write("<h1>名前</h1><br>" + name + "<br><h1>コメント</h1>" + text);
+document.write("<br><br><a href=http://yumaabckhh.php.xdomain.jp/h/h.php?name=" + month + "月" + day + "日" + "%3Cbr%3E" + "名前" + "%3Cbr%3E" + name + "&text=" + text + "><button>確定</button></a>");
+window.Chgsize(0.5);
+window.document.bgColor = "white";
+}
+var textarea = document.getElementById('textarea');
+textarea.style.display = 'none';
+function execCopy(string){
+  textarea.style.display = 'inline-block';
+  setTimeout(texton, 1000);
+  var tmp = document.createElement("div");
+  var pre = document.createElement('pre');
+  
+  pre.style.webkitUserSelect = 'auto';
+  pre.style.userSelect = 'auto';
+  tmp.appendChild(pre).textContent = string;
+  var s = tmp.style;
+  s.position = 'fixed';
+  s.right = '200%';
+  document.body.appendChild(tmp);
+  document.getSelection().selectAllChildren(tmp);
+  var result = document.execCommand("copy");
+  document.body.removeChild(tmp);
+  
+  return result;
+}
+function button(){
+  if(execCopy(textarea.value)){
+    alert('コピーしました 貼り付けして検索してください');
+  }
+  else {
+    alert('このブラウザでは対応していません');
+  }
+};
+var texton = function(){
+    textarea.style.display = 'none';
+  } 
+
+function mail(){
+var mailtitle = document.getElementById('mailtitle').value;
+var mailcontent = document.getElementById('mailcontent').value;
+var mailcc = document.getElementById('mailcc').value;
+document.write("<h1>名前</h1><br>" + mailtitle + "<br><h1>text</h1><br>" + mailcontent + "<br><h1>返信用</h1><br>" + mailcc + "<br>");
+document.write("<a href=http://yumaabckhh.php.xdomain.jp/h/mail.php?title=" + mailtitle + "&content=" + mailcc + "text" + mailcontent + ">送信</a>");
+window.Chgsize(0.5);
+window.document.bgColor = "white";
+}
+</script>
 </body>
 </html>
