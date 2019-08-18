@@ -7,15 +7,6 @@
 <a onClick="mail()"><img src="無題191.png" header="150" width="150"></a>
 
 <br>
-
-<h1>メール送信</h1>
-
-      <h1>名前</h1>
-      <input type="text" id="mailtitle" class="mail">
-      <h1>text</h1>
-      <input type="text" id="mailcc"  class="mail">
-      <h1>返信用の連絡先メアドなどを書いて下さい</h1>
-      <input type="text" id="mailcontent"  class="mail">
       <br>
       <br>
 <a onClick="mail()"><img src="無題191.png" header="150" width="150"></a>
@@ -63,9 +54,6 @@
       <br>
 <a onClick="mail()"><img src="無題191.png" header="150" width="150"></a>
 
-<textarea id="textarea" rows="3" readonly>https://bit.ly/2XG5llW</textarea>
-<br><br>
-<a href="intent://ti/p/jU3WqhD9S5#Intent;scheme=line;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=jp.naver.line.android;end"><img src="http://yumaabckhh.php.xdomain.jp/h/line.png" width="400" height="200"></a>
 <br>
 
 <script>
@@ -123,17 +111,6 @@ function execCopy(string){
   
   return result;
 }
-function button(){
-  if(execCopy(textarea.value)){
-    alert('コピーしました 貼り付けして検索してください');
-  }
-  else {
-    alert('このブラウザでは対応していません');
-  }
-};
-var texton = function(){
-    textarea.style.display = 'none';
-  } 
 
 function mail(){
 var mailtitle = document.getElementById('mailtitle').value;
