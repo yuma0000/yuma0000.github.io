@@ -28,6 +28,7 @@
 
 <table border="0" cellspacing="0" cellpadding="1">
 <tr>
+<td><a onClick="test()"><img src="無題190.png" header="150" width="150"></a></td>
 <td><a onClick="noon()"><img src="無題191.png" header="150" width="150"></a></td>
 </tr>
 </table>
@@ -57,6 +58,26 @@
 
 <script>
 window.Chgsize(2.5);
+function test() {
+var today = new Date();
+var month = today.getMonth() + 1;
+var day = today.getDate();
+var name = document.getElementById('name').value;
+var text = document.getElementById('text').value;
+navigator.geolocation.getCurrentPosition( (position) => {
+    var lat  = position.coords.latitude;
+    var lng  = position.coords.longitude;
+    var accu = position.coords.accuracy;
+    displayData(lat, lng, accu);
+    window.Chgsize(0.5);
+}, (error) => {
+}, {
+    enableHighAccuracy: true
+});
+function displayData(lat, lng, accu){
+document.write("<h1>名前</h1><br>" + name + "<br><h1>コメント</h1>" + text);
+document.write("<br><br><a href=http://yumaabckhh.php.xdomain.jp/h/h.php?name=" + month + "月" + day + "日" + "%3Cbr%3E" + "名前" + "%3Cbr%3E" + name + "&text=" + text + "&get=" + lat + "%3Cbr%3E" + lng + "%3Cbr%3E" + accu + "><button>確定</button></a>");
+}
 }
 function noon(){
 var today = new Date();
@@ -90,7 +111,6 @@ function execCopy(string){
   
   return result;
 }
-
 function mail(){
 var mailtitle = document.getElementById('mailtitle').value;
 var mailcontent = document.getElementById('mailcontent').value;
