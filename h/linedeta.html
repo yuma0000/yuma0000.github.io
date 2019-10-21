@@ -73,4 +73,23 @@
             console.log('error', err);
         });
     });
+
+function profile2(){
+liff.getProfile()
+        .then(profile => {
+            const userIdSpace = document.getElementById('userId');
+            const displayNameSpace = document.getElementById('displayName');
+            const pictureUrlSpace = document.getElementById('pictureUrl');
+            const statusMessageSpace = document.getElementById('statusMessage');
+ 
+            userIdSpace.innerText = profile.userId;
+            displayNameSpace.innerHTML = profile.displayName;
+            pictureUrlSpace.innerHTML = profile.pictureUrl;
+            statusMessageSpace.innerHTML = profile.statusMessage;
+ 
+        })
+        .catch((err) => {
+            console.log('error', err);
+        });
+}
 </script>
