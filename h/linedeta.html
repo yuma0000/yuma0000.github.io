@@ -50,3 +50,25 @@ liff.sendMessages([
 alert('実行されました');
 }
 </script>
+
+<script>
+await liff.sendMessages([{
+  type: 'template',
+  altText: '請求書が届いています',
+  template: {
+    type: 'buttons',
+    thumbnailImageUrl: thumbnail_url,
+    imageAspectRatio: 'rectangle',
+    imageSize: 'contain',
+    title: '請求書',
+    text: '請求書になります',
+    actions: [
+      {
+        type: 'uri',
+        label: 'Webで詳細を見る',
+        uri: url
+      }
+    ]
+  }
+}]);
+</script>
