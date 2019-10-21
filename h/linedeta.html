@@ -15,7 +15,7 @@
 <button onClick="profile2">プロフィール</button>
 
 <script src="https://d.line-scdn.net/liff/1.0/sdk.js" type="text/javascript"></script>
-<script　type="text/javascript">
+<script>
 function profile2(){
 liff.getProfile()
         .then(profile => {
@@ -47,6 +47,6 @@ liff.sendMessages([
             console.log('error', err);
         });
 
-alert(実行されました);
+alert("実行されました");
 }
 </script>
