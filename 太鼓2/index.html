@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>太鼓の達人(夏祭り)</title>
+<meta charset="utf-8">
+<div id="img"></div>
+<script src="setting.js"></script>
+<script>
+var count = 0;
+var speed = 1000;
+String(data);
+var setimg = function(){
+var img = document.createElement("img");
+img.setAttribute("src", "taiko" + data[i] + ".png");
+img.style.position = "absolute";
+img.style.width = width + "px";
+img.style.height = height + "px";
+img.style.left = count + "px";
+document.getElementById("img").appendChild(img);
+count = count + setcount;
+i++;
+}
+setInterval(setimg, 100);
+
+var div = document.getElementById("img");
+div.style.position = "absolute";
+var setleft = function(){
+div.style.left = speed + "px";
+speed = speed - setspeed;
+}
+setInterval(setleft, 10);
+</script>
+</body>
+</html>
